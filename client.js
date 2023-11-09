@@ -6,8 +6,11 @@
  * 3. After the loop, log out the total number of
  *    hobbies
  */
-
-
+let hobbies=['swimming', 'woodworking', 'board games', 'reading', 'painting'];
+for(let i of hobbies){
+     console.log(i);
+}
+console.log(hobbies.length);
 // Example output
 // 1. swimming
 // 2. board games
@@ -24,8 +27,14 @@
  *    is in the array
  * 4. Output the array and number of times teal was found
  */
-
-
+let colors=['teal', 'orange', 'red', 'teal', 'blue', 'purple'];
+let tealCount=0;
+for(let i of colors){
+     if(i==='teal'){
+          tealCount++;
+     }
+}
+console.log(`Teal was found ${tealCount} times`);
 // Example output
 // green, red, teal, orange, teal
 // Teal was found 2 times
@@ -40,7 +49,19 @@
  *    array and even numbers in the evenNumbers array.
  * 4. Output the original array, odd number array and even number array
  */
-
+let nums=[2, 4, 5, 17, 9, 12];
+let oddNumbers=[];
+let evenNumbers=[];
+for(let i of nums){
+     if(i%2===0){
+          evenNumbers.push(i);
+     } else{
+          oddNumbers.push(i);
+     }
+}
+console.log(nums);
+console.log(oddNumbers);
+console.log(evenNumbers);
 
 // Example output
 // 3, 7, 2, 8, 11, 4, 2
@@ -56,7 +77,13 @@
  * 3. Write a loop that adds the opposite value to the toggled array
  * 4. Output both arrays
  */
-
+let switches=[true, true, false, true, false, false];
+let toggled=[];
+for(let i=0; i<switches.length; i++){
+     toggled.push(!switches[i]);
+}
+console.log(switches)
+console.log(toggled);
 
 // Example output
 // true, false, true, true
@@ -74,7 +101,12 @@
  *
  * Hint: Try using a while loop for this one.
  */
-
+let numbers=[0, 4, 6, 2, 0, 5, 0, 0, 0, 0]
+console.log(numbers);
+while(numbers[numbers.length-1]===0){
+     numbers.pop();
+}
+console.log(numbers);
 
 // Example output
 // Before loop 3, 0, 2, 8, 0, 0, 0
@@ -90,7 +122,15 @@
       and lowest numbers.
  * 3. Log the highest and lowest number to the console
  */
-
+let newNums=[4, 56, 32, -4, -8, 12, -63, 87, -44, 9, -76];
+let high=newNums[0];
+let low=newNums[0];
+for(let i of newNums){
+     high=Math.max(high, i)
+     low=Math.min(low, i)
+}
+console.log(high);
+console.log(low);
 
 // Example output
 // 2, 2, -3, 7, 4, 1, 7, 12, 8
